@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - E-commerce Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-gray-800">
+        <a href="#">BrandName</a>
+      </div>
+      <div class="hidden md:flex space-x-8 items-center">
+        <a href="/" class="text-gray-700 hover:text-blue-500">Home</a>
+        <a href="/products.html" class="text-gray-700 hover:text-blue-500">Shop</a>
+        <a href="/about.html" class="text-gray-700 hover:text-blue-500">About</a>
+        <a href="/login.html" class="text-gray-700 hover:text-blue-500">Login</a>
+      </div>
+      <div class="md:hidden">
+        <button id="menuBtn" class="text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden">
+        <a href="/" class="text-gray-700 hover:text-blue-500">Home</a>
+        <a href="/products.html" class="text-gray-700 hover:text-blue-500">Shop</a>
+        <a href="/about.html" class="text-gray-700 hover:text-blue-500">About</a>
+        <a href="/login.html" class="text-gray-700 hover:text-blue-500">Login</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-cover bg-center h-64" style="background-image: url('./python.png');">
+    <div class="container mx-auto h-full flex items-center justify-center">
+      <div class="text-center text-white">
+        <h1 class="text-5xl font-bold">Our Products</h1>
+        <p class="text-lg mt-4">Explore a wide range of quality products.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Browse Our Collection</h2>
+      
+      <!-- Filter and Search -->
+      <div class="flex justify-between items-center mb-8">
+        <div>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Filter by Category</button>
+        </div>
+        <div class="relative">
+          <input type="text" placeholder="Search Products" class="pl-10 pr-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <svg class="w-6 h-6 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 18l6-6m0 0l-6-6m6 6H4"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <!-- Product Card -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <img src="https://via.placeholder.com/400x400" alt="Product Image" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800">Product Name</h3>
+            <p class="text-gray-600 mt-2">$29.99</p>
+            <a href="#" class="mt-4 block bg-blue-500 text-white text-center py-2 rounded hover:bg-blue-600">Add to Cart</a>
+          </div>
+        </div>
+        <!-- Repeat product card as needed -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <img src="https://via.placeholder.com/400x400" alt="Product Image" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800">Product Name</h3>
+            <p class="text-gray-600 mt-2">$49.99</p>
+            <a href="#" class="mt-4 block bg-blue-500 text-white text-center py-2 rounded hover:bg-blue-600">Add to Cart</a>
+          </div>
+        </div>
+        <!-- Add more product cards -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <img src="https://via.placeholder.com/400x400" alt="Product Image" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800">Product Name</h3>
+            <p class="text-gray-600 mt-2">$59.99</p>
+            <a href="#" class="mt-4 block bg-blue-500 text-white text-center py-2 rounded hover:bg-blue-600">Add to Cart</a>
+          </div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <img src="https://via.placeholder.com/400x400" alt="Product Image" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800">Product Name</h3>
+            <p class="text-gray-600 mt-2">$89.99</p>
+            <a href="#" class="mt-4 block bg-blue-500 text-white text-center py-2 rounded hover:bg-blue-600">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="flex justify-center mt-12">
+        <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-l hover:bg-gray-300">Previous</button>
+        <button class="bg-blue-500 text-white px-4 py-2">1</button>
+        <button class="bg-gray-200 text-gray-700 px-4 py-2 hover:bg-gray-300">2</button>
+        <button class="bg-gray-200 text-gray-700 px-4 py-2 hover:bg-gray-300">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="font-semibold mb-4">Company</h4>
+          <ul>
+            <li><a href="#" class="hover:underline">About Us</a></li>
+            <li><a href="#" class="hover:underline">Careers</a></li>
+            <li><a href="#" class="hover:underline">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Help</h4>
+          <ul>
+            <li><a href="#" class="hover:underline">Customer Service</a></li>
+            <li><a href="#" class="hover:underline">Shipping Info</a></li>
+            <li><a href="#" class="hover:underline">Returns & Refunds</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Follow Us</h4>
+          <ul>
+            <li><a href="#" class="hover:underline">Instagram</a></li>
+            <li><a href="#" class="hover:underline">Facebook</a></li>
+            <li><a href="#" class="hover:underline">Twitter</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Newsletter</h4>
+          <form action="#" class="flex flex-col">
+            <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-lg text-gray-700">
+            <button class="bg-blue-500 text-white px-4 py-2 mt-4 rounded-lg hover:bg-blue-600">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Mobile Menu -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
